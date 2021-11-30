@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="BIG5">
+<title>Page1</title>
+<style>
+body {
+  background-color: Orange;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+h2 {
+  color: white;
+  text-align: left;
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+</style>
+<script>
+function myFunction() {
+	if (document.getElementById("Location").value == "Chicago") {
+		document.getElementById("important").style.visibility="visible"
+	}
+}
+function myFunction2() {
+	if (document.getElementById("Secert").value == "N") {
+		javascript:location.href='HwPage2.html'
+	}
+	else {
+		document.getElementById("important").style.visibility="hidden"
+	}
+}
+</script>
+</head>
+
+<body>
+<h1>My self introduction</h1>
+<p>
+I am Tsung-Yang Wang<br>
+My hobby is doing homework.<br>
+Favorite class: Enterprise Application Development
+</p>
+<h2>Q and Guess:</h2>
+<p>
+Where do I live?
+</p>
+<select name="MyLocation" id="Location">
+　<option value="Taipei">Taipei</option>
+　<option value="Chicago">Chicago</option>
+　<option value="NewYork">NewYork</option>
+</select>
+<button type="button" id="myBtn" onclick="myFunction()">Submit answer</button><br><br>
+
+<div id="important" style="visibility:hidden">
+<p>
+(Challenge Question)Am I single?
+</p>
+<select name="Secert" id="Secert">
+　<option value="Y">Yes</option>
+　<option value="N">No</option>
+</select>
+<button type="button" id="myBtn2" onclick="myFunction2()">Submit answer</button><br><br>
+</div>
+
+<img id="home" src="Tphoto.jpg" width="1000" height="700">
+</body>
+</html>
